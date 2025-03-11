@@ -12,7 +12,7 @@
 
 .sidebar {
     grid-row: 1 / -1;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: min-content 5fr;
     display: grid;
     background-color: #1992d4;
     color: white;
@@ -25,7 +25,7 @@
     align-items: center;
     font-size: 1.8rem;
     gap: 1rem;
-    padding-left: 1rem;
+    padding: 1rem 0rem 1rem 1rem;
 }
 
 .brand > svg {
