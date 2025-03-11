@@ -1,0 +1,49 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) 4fr;
+    grid-template-rows: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.sidebar {
+    grid-row: 1 / -1;
+    grid-template-rows: 1fr 5fr;
+    display: grid;
+    background-color: #1992d4;
+    color: white;
+    fill: white;
+    font-weight: bold;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+
+.brand > svg {
+    height: 3rem;
+}
+
+.nav > *, .tools > * {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0rem 1rem 2rem;
+    font-size: 1.2rem;
+}
+
+.nav {
+    padding-bottom: 2rem;
+}
+
+svg {
+    height: 1.5rem;
+}
