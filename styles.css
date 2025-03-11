@@ -52,6 +52,50 @@
     text-decoration: underline;
 }
 
+.header {
+    display: grid;
+}
+
+.top-Header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: min-content;
+    padding-top: 1.5rem;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.searchbar > * {
+    height: 1.5rem;
+}
+
+input {
+    width: 80%;
+    border-radius: 15px;
+    padding-left: 8px;
+    background-color: #e2e8f0;
+}
+
+.user-Infos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 svg {
     height: 1.5rem;
+}
+
+img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
 }
