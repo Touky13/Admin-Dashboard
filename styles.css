@@ -102,8 +102,11 @@ input {
     width: 31px;
 }
 
-img:hover {
+.bottom-Header img:hover {
     cursor: pointer;
+    border: 2px solid #1992d4;
+    height: 60px;
+    width: 60px;
 }
 
 .trending p:hover {
