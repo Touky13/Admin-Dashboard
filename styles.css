@@ -54,13 +54,15 @@
 
 .header {
     display: grid;
+    grid-template-rows: min-content min-content;
+    gap: 2rem;
 }
 
 .top-Header {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: min-content;
-    padding-top: 1.5rem;
+    padding-top: 1.2rem;
 }
 
 .searchbar {
@@ -133,7 +135,7 @@ svg {
 }
 
 img {
-    height: 2rem;
-    width: 2rem;
+    height: 2.2rem;
+    width: 2.2rem;
     border-radius: 50%;
 }
