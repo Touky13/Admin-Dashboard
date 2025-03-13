@@ -137,7 +137,7 @@ input {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: repeat(3, min-content);
     padding: 2rem 1.5rem 0rem 1rem;
-    gap: 1rem;
+    gap: 1rem 1.5rem;
     background-color: #e2e8f0;
     box-shadow: inset #d4dae1 0px 3px 5px 0;
 }
@@ -161,10 +161,30 @@ input {
     padding: 1.5rem 5%;
     border-radius: 2%;
     box-shadow: #d4dae1 5px 5px 5px 0px;
+    font-size: 0.9rem;
 }
 
-.projects p {
+.main p {
     color: #646262;
+}
+
+.main h4 {
+    line-height: 1.5;
+}
+
+.announcements {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: white;
+    box-shadow: #d4dae1 5px 5px 5px 0px;
+    border-radius: 2%;
+    font-size: 0.8rem;
+}
+
+.maintenance, .community {
+    border-bottom: 1px dashed #646262;
 }
 
 .icons {
