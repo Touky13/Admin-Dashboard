@@ -6,7 +6,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: minmax(300px, 1fr) 4fr;
+    grid-template-columns: minmax(250px, 1fr) 4fr;
     grid-template-rows: min-content 1fr;
     min-height: 100vh;
 }
@@ -45,7 +45,7 @@
     padding-bottom: 2rem;
 }
 
-.nav > * > *, .tools > * > * {
+.nav > * > *, .tools > * > *, .icons, button, .top-Header svg {
     cursor: pointer;
 }
 
@@ -87,11 +87,32 @@ input {
 
 .user-Infos {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    column-gap: 2rem;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+.user-Infos img:hover, .trending img:hover {
+    cursor: pointer;
+    border: 2px solid #1992d4;
+    height: 31px;
+    width: 31px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+.trending p:hover {
+    cursor: default;
+    text-decoration: underline;
+}
+
+.user-Infos > * {
+    flex-shrink: 0;
 }
 
 .bottom-Header {
@@ -111,8 +132,8 @@ input {
 
 .welcome-User img {
     grid-row: 1 / -1;
-    height: 4rem;
-    width: 4rem;
+    height: 64px;
+    width: 64px;
     border-radius: 50%;
     margin-left: 3rem;
 }
@@ -135,7 +156,7 @@ input {
 .main {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: repeat(3, min-content);
+    grid-template-rows: repeat(4, min-content);
     padding: 2rem 1.5rem 0rem 1rem;
     gap: 1rem 1.5rem;
     background-color: #e2e8f0;
@@ -185,6 +206,7 @@ input {
 
 .maintenance, .community {
     border-bottom: 1px dashed #646262;
+    padding-bottom: 1rem;
 }
 
 .icons {
@@ -193,12 +215,33 @@ input {
     gap: 1rem;
 }
 
+.trending {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: white;
+    box-shadow: #d4dae1 5px 5px 5px 0px;
+}
+
+.trending > * {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.trending > div[class*="trend"] > img {
+    grid-row: 1 / -1;
+}
+
 svg {
     height: 1.5rem;
 }
 
 img {
-    height: 2.2rem;
-    width: 2.2rem;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
 }
