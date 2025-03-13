@@ -156,6 +156,10 @@ input {
     font-weight: bold;
 }
 
+button:hover {
+    opacity: 80%;
+}
+
 .main {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -176,6 +180,11 @@ input {
 
 .projects > h4 {
     grid-column: 1 / -1;
+}
+
+.projects h4:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .projects > div[class*="project"] {
