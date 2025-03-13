@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
@@ -132,8 +133,44 @@ input {
 }
 
 .main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(3, min-content);
+    padding: 2rem 1.5rem 0rem 1rem;
+    gap: 1rem;
     background-color: #e2e8f0;
     box-shadow: inset #d4dae1 0px 3px 5px 0;
+}
+
+.projects {
+    grid-row: 2 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: min-content;
+    gap: 1rem;
+}
+
+.projects > h4 {
+    grid-column: 1 / -1;
+}
+
+.projects > div[class*="project"] {
+    display: grid;
+    grid-template-rows: min-content 3fr min-content;
+    background: linear-gradient(to right, #f0b429 2%, white 2%); 
+    padding: 1.5rem 5%;
+    border-radius: 2%;
+    box-shadow: #d4dae1 5px 5px 5px 0px;
+}
+
+.projects p {
+    color: #646262;
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
 }
 
 svg {
