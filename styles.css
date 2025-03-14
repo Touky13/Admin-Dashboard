@@ -4,6 +4,14 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }
+
 .container {
     display: grid;
     grid-template-columns: minmax(250px, 1fr) 4fr;
@@ -65,12 +73,12 @@
     grid-template-columns: 2fr 1fr;
     grid-template-rows: min-content;
     padding-top: 1.2rem;
+    padding-left: 1.5rem;
 }
 
 .searchbar {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 1rem;
 }
 
@@ -91,6 +99,7 @@ input {
     align-items: center;
     justify-content: center;
     column-gap: 2rem;
+    row-gap: 0.5rem;
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -100,6 +109,11 @@ input {
     border: 2px solid #1992d4;
     height: 31px;
     width: 31px;
+}
+
+#bell:hover {
+    animation: tilt-shaking 0.5s;
+    animation-iteration-count: infinite;
 }
 
 .bottom-Header img:hover {
@@ -123,27 +137,34 @@ input {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: min-content;
     align-items: center;
+    padding-left: 1.5rem;
     font-weight: bold;
 }
 
 .welcome-User {
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: min-content 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+.welcome-Message {
+    grid-row: 1 / -1;
 }
 
 .welcome-User img {
     grid-row: 1 / -1;
+    display: flex;
     height: 64px;
     width: 64px;
     border-radius: 50%;
-    margin-left: 3rem;
 }
 
 .buttons {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 0.75rem 1.5rem;
 }
 
